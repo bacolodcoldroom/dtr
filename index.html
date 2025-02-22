@@ -53,18 +53,18 @@
     createItem({ id: 3, name: 'Jeff 3' });
     
     console.log('All items after creation:', readItems());
-    document.getElementById('j_ctr1').innerHTML=readItems();
+    document.getElementById('j_ctr1').innerHTML=readItems().length;
     
     
     // Update the first item
     updateItem(0, { id: 1, name: 'Updated Item 1' });
     console.log('After update:', readItems());
-    document.getElementById('j_ctr2').innerHTML=readItems();
+    document.getElementById('j_ctr2').innerHTML=readItems().length;
     
     // Delete the second item
     deleteItem(1);
     console.log('After deletion:', readItems());
-    document.getElementById('j_ctr3').innerHTML=readItems();
+    document.getElementById('j_ctr3').innerHTML=readItems().length;
   </script>
 </body>
 </html>
