@@ -2,10 +2,14 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>JS CRUD with JSON Example</title>
+  <title>Jeffrey Override!</title>
 </head>
 <body>
-  <h1>JavaScript CRUD (JSON + localStorage)</h1>
+  <h1>Jeffrey's Counters</h1>
+  <hr>
+  <h2>All items after creation: <span id="j_ctr1"></span></h2>
+  <h2>After update: <span id="j_ctr2"></span></h2>
+  <h2>After deletion: <span id="j_ctr3"></span></h2>
   <script>
     // Initialize localStorage if it doesn't have our "items" key
     if (!localStorage.getItem('items')) {
@@ -49,14 +53,18 @@
     createItem({ id: 3, name: 'Jeff 3' });
     
     console.log('All items after creation:', readItems());
+    document.getElementById('j_ctr1').innerHTML=readItems();
+    
     
     // Update the first item
     updateItem(0, { id: 1, name: 'Updated Item 1' });
     console.log('After update:', readItems());
+    document.getElementById('j_ctr2').innerHTML=readItems();
     
     // Delete the second item
     deleteItem(1);
     console.log('After deletion:', readItems());
+    document.getElementById('j_ctr3').innerHTML=readItems();
   </script>
 </body>
 </html>
